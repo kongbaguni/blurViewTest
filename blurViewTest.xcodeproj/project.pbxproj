@@ -13,9 +13,13 @@
 		C3DE73842554270E00B537A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DE73822554270E00B537A7 /* Main.storyboard */; };
 		C3DE73862554271100B537A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DE73852554271100B537A7 /* Assets.xcassets */; };
 		C3DE73892554271100B537A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DE73872554271100B537A7 /* LaunchScreen.storyboard */; };
+		DAD635FE127EA008F8D96ECB /* Pods_blurViewTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36273C063F231AF82731DB3B /* Pods_blurViewTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36273C063F231AF82731DB3B /* Pods_blurViewTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blurViewTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0679B05360B01DE0619B6D /* Pods-blurViewTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blurViewTest.debug.xcconfig"; path = "Target Support Files/Pods-blurViewTest/Pods-blurViewTest.debug.xcconfig"; sourceTree = "<group>"; };
+		AA7A4955EA8A67AC78DABB0E /* Pods-blurViewTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blurViewTest.release.xcconfig"; path = "Target Support Files/Pods-blurViewTest/Pods-blurViewTest.release.xcconfig"; sourceTree = "<group>"; };
 		C3DE73792554270D00B537A7 /* blurViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blurViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DE737C2554270E00B537A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3DE737E2554270E00B537A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD635FE127EA008F8D96ECB /* Pods_blurViewTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1934792C9898DF74B5B34CCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D0679B05360B01DE0619B6D /* Pods-blurViewTest.debug.xcconfig */,
+				AA7A4955EA8A67AC78DABB0E /* Pods-blurViewTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		87F24DCACBAE333F4461376D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36273C063F231AF82731DB3B /* Pods_blurViewTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3DE73702554270D00B537A7 = {
 			isa = PBXGroup;
 			children = (
 				C3DE737B2554270D00B537A7 /* blurViewTest */,
 				C3DE737A2554270D00B537A7 /* Products */,
+				1934792C9898DF74B5B34CCA /* Pods */,
+				87F24DCACBAE333F4461376D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3DE738D2554271100B537A7 /* Build configuration list for PBXNativeTarget "blurViewTest" */;
 			buildPhases = (
+				11B58450EEF170B4C956B76B /* [CP] Check Pods Manifest.lock */,
 				C3DE73752554270D00B537A7 /* Sources */,
 				C3DE73762554270D00B537A7 /* Frameworks */,
 				C3DE73772554270D00B537A7 /* Resources */,
+				E9AD02D4D096E5B993F1BB12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11B58450EEF170B4C956B76B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-blurViewTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9AD02D4D096E5B993F1BB12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-blurViewTest/Pods-blurViewTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-blurViewTest/Pods-blurViewTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-blurViewTest/Pods-blurViewTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3DE73752554270D00B537A7 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		C3DE738E2554271100B537A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D0679B05360B01DE0619B6D /* Pods-blurViewTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		C3DE738F2554271100B537A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA7A4955EA8A67AC78DABB0E /* Pods-blurViewTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
